@@ -1,0 +1,35 @@
+services:
+  gz-worlds-dev:
+    build:
+      context: ..
+      dockerfile: docker/images/${ROSDISTRO:-humble}/Dockerfile
+      args:
+        - GZ_VERSION=${GZ_VERSION:-harmonic}
+    image: ekumenlabs/gz-worlds-${ROSDISTRO:-humble}-dev
+    hostname: gz-worlds-${ROSDISTRO:-humble}-dev
+    container_name: gz-worlds-${ROSDISTRO:-humble}-dev
+    environment:
+      - DISPLAY
+      - QT_X11_NO_MITSHM=1
+      - IGN_IP=127.0.0.1
+      - XAUTHORITY=/tmp/.docker.xauth
+      - NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES:-all}
+      - NVIDIA_DRIVER_CAPABILITIES=${NVIDIA_DRIVER_CAPABILITIES:-all}
+    stdin_open: true
+    tty: true
+    user: ${USERID:-1000}:${GROUPID:-1000}
+    privileged: ${PRIVILEGED_CONTAINER:-false}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /tmp/.docker.xauth:/tmp/.docker.xauth
+      - ..:/home/developer/ws/src/gz-worlds
+      - gz-fuel-cache:/home/developer/.gz
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+volumes:
+  gz-fuel-cache:
