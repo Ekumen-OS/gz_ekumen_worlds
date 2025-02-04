@@ -40,3 +40,4 @@ jobs:
          with:
            package-name: gz-ekumen
            target-ros2-distro: jazzy
+           import-token: ${{ secrets.GITHUB_TOKEN }}
