@@ -17,7 +17,7 @@ concurrency:
 jobs:
   lint:
     name: Lint sources
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,3 +29,14 @@ jobs:
         run: pip install pre-commit
       - name: Run linters
         run: pre-commit run --all-files --verbose --show-diff-on-failure
+  build-and-test:
+    name: Build & test
+    needs: lint
+    runs-on: ubuntu-24.04
+    container:
+      image: ros:jazzy-ros-base
+    steps:
+       - uses: ros-tooling/action-ros-ci@v0.3
+         with:
+           package-name: gz-ekumen
+           target-ros2-distro: jazzy
