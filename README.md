@@ -13,7 +13,7 @@ These worlds have been tested the following matrix:
 - OS:
   - Ubuntu 22.04 Jammy Jellyfish
   - Ubuntu 24.04 Noble Numbat
-- ROS 2: 
+- ROS 2:
   - Humble Hawksbill
   - Jazzy Jalisco
 - Gazebo:

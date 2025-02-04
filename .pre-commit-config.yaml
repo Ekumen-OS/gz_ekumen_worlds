@@ -1,0 +1,33 @@
+# Run against all the files: pre-commit run -a
+# Install the git hook scripts: pre-commit install
+
+repos:
+  - repo: local
+    hooks:
+      - id: copyright
+        name: fix copyright
+        description: Check that files have a copyright notice.
+        entry: tools/check_copyright.py
+        args: [--fix]
+        types_or: [c++, python, cmake]
+        language: python
+        language_version: python3
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-ast
+      - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: check-yaml
+        args: [--allow-multiple-documents]
+      - id: check-xml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/cheshirekow/cmake-format-precommit
+    rev: v0.6.13
+    hooks:
+      - id: cmake-format
+      - id: cmake-lint

@@ -108,8 +108,8 @@ get acquainted with this development process.
    your life easier.
 
 #. **Write your code.** To remember:
-   - Look at the existing code and try to maintain the existing style and pattern as much as possible
-   - **Always** keep your branch updated with the original repository
+   - Look at the existing code and try to maintain the existing style and pattern as much as possible. You may install `pre-commit` hooks to enforce this.
+   - **Always** keep your branch updated with the original repository.
 
 #### Process
 
