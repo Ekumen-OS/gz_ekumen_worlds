@@ -34,8 +34,11 @@ jobs:
     needs: lint
     runs-on: ubuntu-24.04
     container:
-      image: ros:jazzy-ros-base
+      image: osrf/ros:jazzy-desktop
     steps:
+       - uses: ros-tooling/setup-ros@v0.7
+         with:
+           required-ros-distributions: jazzy
        - uses: ros-tooling/action-ros-ci@v0.3
          with:
            package-name: gz-ekumen
