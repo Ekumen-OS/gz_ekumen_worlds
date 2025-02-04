@@ -2,17 +2,6 @@
 # Install the git hook scripts: pre-commit install
 
 repos:
-  - repo: local
-    hooks:
-      - id: copyright
-        name: fix copyright
-        description: Check that files have a copyright notice.
-        entry: tools/check_copyright.py
-        args: [--fix]
-        types_or: [c++, python, cmake]
-        language: python
-        language_version: python3
-
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:

@@ -17,6 +17,11 @@ project(gz-ekumen)
 
 find_package(ament_cmake REQUIRED)
 
+if(BUILD_TESTING)
+  find_package(ament_cmake_copyright REQUIRED)
+  ament_copyright()
+endif()
+
 install(DIRECTORY models worlds DESTINATION share/${PROJECT_NAME}/)
 
 ament_environment_hooks(
