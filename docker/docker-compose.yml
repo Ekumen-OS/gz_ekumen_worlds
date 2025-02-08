@@ -1,13 +1,13 @@
 services:
-  gz-worlds-dev:
+  gz_ekumen_worlds-dev:
     build:
       context: ..
       dockerfile: docker/images/${ROSDISTRO:-humble}/Dockerfile
       args:
         - GZ_VERSION=${GZ_VERSION:-harmonic}
-    image: ekumenlabs/gz-worlds-${ROSDISTRO:-humble}-dev
-    hostname: gz-worlds-${ROSDISTRO:-humble}-dev
-    container_name: gz-worlds-${ROSDISTRO:-humble}-dev
+    image: ekumenlabs/gz_ekumen_worlds-${ROSDISTRO:-humble}-dev
+    hostname: gz_ekumen_worlds-${ROSDISTRO:-humble}-dev
+    container_name: gz_ekumen_worlds-${ROSDISTRO:-humble}-dev
     environment:
       - DISPLAY
       - QT_X11_NO_MITSHM=1
@@ -22,7 +22,7 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - /tmp/.docker.xauth:/tmp/.docker.xauth
-      - ..:/home/developer/ws/src/gz-worlds
+      - ..:/home/developer/ws/src/gz_ekumen_worlds
       - gz-fuel-cache:/home/developer/.gz
     deploy:
       resources:

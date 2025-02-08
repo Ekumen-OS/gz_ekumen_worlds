@@ -70,6 +70,6 @@ done
 # https://github.com/docker/compose/releases/tag/v2.13.0.
 # We have this for convenience and compatibility with previous versions.
 # Otherwise, we could just forward the script arguments to the run verb.
-[[ "$BUILD" = true ]] && docker compose build gz-worlds-dev
+[[ "$BUILD" = true ]] && docker compose build gz_ekumen_worlds-dev
 
-PRIVILEGED_CONTAINER=$PRIVILEGED_CONTAINER USERID=$(id -u) GROUPID=dialout docker compose run --rm gz-worlds-dev
+PRIVILEGED_CONTAINER=$PRIVILEGED_CONTAINER USERID=$(id -u) GROUPID=dialout docker compose run --rm gz_ekumen_worlds-dev

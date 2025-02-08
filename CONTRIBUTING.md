@@ -2,9 +2,9 @@
 
 The contributing guidelines are based on the [Andino](https://github.com/Ekumen-OS/andino) project's guidelines.
 
-## Contributing to `gz-worlds`
+## Contributing to `gz_ekumen_worlds`
 
-The following is a set of guidelines for contributing to the `gz-worlds` project.
+The following is a set of guidelines for contributing to the `gz_ekumen_worlds` project.
 These are mostly guidelines, not rules. Use your best judgment, and feel free to
 propose changes to this document in a pull request.
 
@@ -49,12 +49,12 @@ Provide more context by answering these questions:
 
 Include details about your configuration and environment:
 
-* **Which version of `gz-worlds` are you using?**?
+* **Which version of `gz_ekumen_worlds` are you using?**?
 * **What's the name and version of the OS you're using**?
 * **What's the ROS 2 distribution you're using**?
 * **What's the Gazebo version you're using**?
-* **Are you running `gz-worlds` using the provided docker container?** See [docker](docker/README.md).
-* **Are you running `gz-worlds` in a virtual machine?** If so, which VM software are you using and which operating systems and versions are used for the host and the guest?
+* **Are you running `gz_ekumen_worlds` using the provided docker container?** See [docker](docker/README.md).
+* **Are you running `gz_ekumen_worlds` in a virtual machine?** If so, which VM software are you using and which operating systems and versions are used for the host and the guest?
 
 
 ### Suggesting Enhancements
@@ -75,7 +75,7 @@ existed.
 
 * **Check if you're using the latest software version**. A more recent version may contain your desired feature.
 * **Determine which repository the enhancement should be suggested in**
-* **Perform a** [cursory search](https://github.com/Ekumen-OS/gz-worlds/issues?q=is%3Aissue) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
+* **Perform a** [cursory search](https://github.com/Ekumen-OS/gz_ekumen_worlds/issues?q=is%3Aissue) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
 
 #### How Do I Submit A (Good) Enhancement Suggestion
 
@@ -89,7 +89,7 @@ After you've determined which repository your enhancement suggestion is related 
 * **Describe the current behavior** and **explain which behavior you expected to see instead** and why.
 * **Include screenshots and animated GIFs** which show you following the described steps and clearly demonstrate the problem.
 * **Explain why this enhancement would be useful** to most users and isn't something that can or should be implemented as a separate application.
-* **Specify which version of `gz-worlds` you're using.**
+* **Specify which version of `gz_ekumen_worlds` you're using.**
 * **Specify the name and version of the OS you're using.**
 
 ### Contributing Code
@@ -100,7 +100,7 @@ get acquainted with this development process.
 
 #. **Read the** [reporting_bugs](#reporting-bugs) **and** [suggesting_enhancements](#suggesting-enhancements) **sections first.**
 
-#. **Fork the `gz-worlds` repository**. All of your development should take place in your fork.
+#. **Fork the `gz_ekumen_worlds` repository**. All of your development should take place in your fork.
    - An important thing to do is create a remote pointing to the [upstream remote repository](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork). This way, you can always check for modifications on the original repository and **always** keep your fork repository up to date.
 
 #. **Work out of a new branch**, one that is not

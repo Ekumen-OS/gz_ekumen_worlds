@@ -26,8 +26,8 @@ These worlds have been tested the following matrix:
 Once built and sourced, package resources may be found under `<package-name>/models` and `<package-name>/worlds`, e.g.:
 
 ``` sh
-gz sim -r gz-ekumen/worlds/populated_ekumen_hq4.world  # for Gazebo Garden and later versions
-ign gazebo -r gz-ekumen/worlds/populated_ekumen_hq4.world  # for Gazebo Fortress and earlier versions
+gz sim -r gz_ekumen_worlds/worlds/populated_ekumen_hq4.world  # for Gazebo Garden and later versions
+ign gazebo -r gz_ekumen_worlds/worlds/populated_ekumen_hq4.world  # for Gazebo Fortress and earlier versions
 ```
 
 ## :raised_hands: Contributing
