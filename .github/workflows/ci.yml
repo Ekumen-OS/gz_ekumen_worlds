@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+# Cancel previously running PR jobs
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint sources
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          cache: pip
+      - name: Install python packages
+        run: pip install pre-commit
+      - name: Run linters
+        run: pre-commit run --all-files --verbose --show-diff-on-failure
+  build-and-test:
+    name: Build & test
+    needs: lint
+    runs-on: ubuntu-24.04
+    container:
+      image: osrf/ros:jazzy-desktop
+    steps:
+       - uses: ros-tooling/setup-ros@v0.7
+         with:
+           required-ros-distributions: jazzy
+       - uses: ros-tooling/action-ros-ci@v0.3
+         with:
+           package-name: gz_ekumen_worlds
+           target-ros2-distro: jazzy
+           import-token: ${{ secrets.GITHUB_TOKEN }}

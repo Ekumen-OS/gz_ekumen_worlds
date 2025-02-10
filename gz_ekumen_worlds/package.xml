@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>gz_ekumen_worlds</name>
+  <version>0.1.0</version>
+  <description>Useful Gazebo worlds and models</description>
+  <author email="franco.c@ekumenlabs.com">Franco Cipollone</author>
+  <author email="la.rodriguez@ekumenlabs.com">Laura Rodriguez</author>
+  <author email="glpuga@ekumenlabs.com">Gerardo Puga</author>
+  <author email="michel@ekumenlabs.com">Michel Hidalgo</author>
+  <maintainer email="ignacio.davila@ekumenlabs.com">Ignacio Davila Gallesio</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <test_depend>ament_cmake_copyright</test_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
