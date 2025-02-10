@@ -92,7 +92,7 @@ After you've determined which repository your enhancement suggestion is related 
 * **Specify which version of `gz_ekumen_worlds` you're using.**
 * **Specify the name and version of the OS you're using.**
 
-### Contributing Code
+### Contributing Code & Assets
 
 We follow a development process designed to reduce errors, encourage
 collaboration, and make high quality code. Review the following to
@@ -107,15 +107,20 @@ get acquainted with this development process.
    a release / main branch. This is a good habit to get in, and will make
    your life easier.
 
-#. **Write your code.** To remember:
+#. **Write your code and assets.** To remember:
    - Look at the existing code and try to maintain the existing style and pattern as much as possible. You may install `pre-commit` hooks to enforce this.
    - **Always** keep your branch updated with the original repository.
 
+Same as for code, every asset submitted must be compatible with this repository license.
+That is, it must be of your own making or licensed under terms that are at least as permissive
+as this license and attributed as such. CC0 is one example of a typical asset license that is
+compatible.
+
 #### Process
 
-All Andino team members actively:
+All Ekumen team members actively:
 
-* **Watch** all Andino-related repositories to receive email notifications of new issues / pull requests
+* **Watch** all Ekumen OS repositories to receive email notifications of new issues / pull requests
 * Provide **feedback** to issues as soon as possible
 * **Review** pull requests as soon as possible
 
