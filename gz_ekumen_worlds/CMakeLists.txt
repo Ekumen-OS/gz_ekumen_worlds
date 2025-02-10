@@ -13,7 +13,7 @@
 # limitations under the License.
 
 cmake_minimum_required(VERSION 3.7)
-project(gz-ekumen)
+project(gz_ekumen_worlds)
 
 find_package(ament_cmake REQUIRED)
 

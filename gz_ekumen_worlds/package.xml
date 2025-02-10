@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>gz-ekumen</name>
+  <name>gz_ekumen_worlds</name>
   <version>0.1.0</version>
   <description>Useful Gazebo worlds and models</description>
   <author email="franco.c@ekumenlabs.com">Franco Cipollone</author>

@@ -2,7 +2,7 @@ FROM ros:humble-ros-base-jammy AS cacher
 
 WORKDIR /ws/src
 
-COPY . gz-worlds/
+COPY . gz_ekumen_worlds/
 
 RUN mkdir -p /tmp/ws/src \
   && find ./ -name "package.xml" | xargs cp --parents -t /tmp/ws/src \

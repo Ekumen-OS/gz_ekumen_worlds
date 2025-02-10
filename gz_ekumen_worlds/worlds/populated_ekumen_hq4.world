@@ -118,7 +118,7 @@
       </camera>
     </gui>
     <include>
-      <uri>model://gz-ekumen/models/ekumen_hq4</uri>
+      <uri>model://gz_ekumen_worlds/models/ekumen_hq4</uri>
     </include>
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Office Desk</uri>
