@@ -39,7 +39,7 @@ jobs:
        - uses: ros-tooling/setup-ros@v0.7
          with:
            required-ros-distributions: jazzy
-       - uses: ros-tooling/action-ros-ci@v0.3
+       - uses: ros-tooling/action-ros-ci@v0.4
          with:
            package-name: gz_ekumen_worlds
            target-ros2-distro: jazzy
